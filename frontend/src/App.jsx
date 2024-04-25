@@ -7,7 +7,7 @@ import axios from 'axios'
 function App() {
   const [jokes, setjokes] = useState([])
   useEffect(() => {
-    axios.get('http://localhost:3000/jokes')
+    axios.get('/api/jokes')
       .then((response) => {
         setjokes(response.data)
       })
